@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/images/icons8-consultant-64.png" type="image/svg+xml">
+  <title>Your Friend's - shedule call!</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .main-box {
+      width: 50vh; /* Adjust width as needed */
+      height: 31vh; /* Adjust height as needed */
+      background-color: hsl(47, 98%, 50%); /* Adjust background color as needed */
+      margin-top: 50px; /* Adjust margin as needed */
+      border-radius: 20px;
+      position: relative;
+      box-shadow: 17px 24px 27px -12px rgba(0,0,0,0.41);
+      padding: 20px; /* Added padding for content */
+    }
+    .head-box {
+      width: 70%;
+      height: 45px;
+      background-color: #C70039;
+      color: white;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      position: absolute;
+      top: -6%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .head-text {
+      font-size: 30px; /* Adjust font size as needed */
+    }
+    .content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: calc(100% - 90px); /* Adjust for button and spacing */
+    }
+    .input-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .input-container input[type="text"],
+    .input-container select,
+    .input-container input[type="date"],
+    .input-container input[type="time"] {
+      border-radius: 15px;
+      background-color: #ffffff;
+      border: none;
+      padding: 8px;
+      margin-left: 10px;
+      width: calc(100% - 120px); /* Adjust width as needed */
+      height: 25px; /* Adjust height as needed */
+    }
+    .input-container select {
+      height: 40px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+    .input-label {
+      width: 100px;
+      font-weight: bold;
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .button {
+        width: 220px;
+    height: 55px;
+    background-color: #C70039;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 0%;
+    align-items: center;
+    font-size: 20px;
+    border-bottom-left-radius: 70px;
+      border-top-right-radius: 70px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-box">
+    <div class="head-box">
+      <div class="head-text">Start Call</div>
+    </div>
+    <div class="content">
+      <div class="input-container">
+        <div class="input-label">Name:</div>
+        <input type="text" placeholder="Enter your full name" style="height: 25px;">
+      </div>
+      <div class="input-container">
+        <div class="input-label">Topic:</div>
+        <select style="height: 40px; width: 70%;">
+          <option value="select your option">select your option</option>
+          <option value="abuse_discrimination">Abuse & Discrimination</option>
+          <option value="academic">Academic</option>
+          <option value="career">Career</option>
+          <option value="lgbtqia">LGBTQIA+</option>
+          <option value="relationship">Relationship</option>
+          <option value="self_improvement">Self Improvement</option>
+          <option value="sexual_wellness">Sexual Wellness</option>
+          <option value="Not decided">Not decided</option>
+        </select>
+      </div>
+      <div class="input-container">
+        <div class="input-label">Date:</div>
+        <input type="date" style="height: 25px;">
+      </div>
+      <div class="input-container">
+        <div class="input-label">Time:</div>
+         <select style="height: 40px; width: 70%;">
+          <option value="7:00pm">select time slots</option>
+          <option value="7:00pm">7:00pm - 8:00pm</option>
+          <option value="8:00pm">8:00pm - 9:00pm</option>
+          <option value="9:00pm">9:00pm - 10:00pm</option>
+          <option value="9:00pm">10:00pm - 11:00pm</option>
+          <option value="9:00pm">11:00pm - 12:00am</option>
+          <option value="9:00pm">12:00am - 1:00am</option>
+          <option value="9:00pm">1:00am - 2:00am</option>
+          <!-- Add more options as needed -->
+         </select>
+      </div>
+      <div class="button-container">
+        <div class="button">Payment</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
