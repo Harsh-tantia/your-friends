@@ -1300,11 +1300,14 @@ body {
   position: absolute;
   list-style: none;
   padding: 0;
+  height: 115px; /* Fixed height */
+  width: 150px; /* Fixed width */
   margin: 0;
   background-color: #fff;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   z-index: 1;
   border-radius: 5px;
+  overflow-y: auto; /* Add scrollbar when content exceeds the height */
 }
 
 .dropdown:hover .dropdown-menu {
@@ -1313,13 +1316,17 @@ body {
 
 .dropdown-menu li {
   padding: 8px 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
 }
 
 .dropdown-menu li a {
   text-decoration: none;
   color: #333;
   display: block;
-  border-bottom: 1px solid #000000;
 }
 
 .dropdown-menu li a:hover {
