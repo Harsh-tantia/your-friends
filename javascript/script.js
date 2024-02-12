@@ -144,9 +144,4 @@ const container = document.querySelector('.slide-container');
       autoPlay();
     })
 
-    // register modal
-
-    function changeLink() {
-      document.querySelector(".navbar-link").setAttribute("href", "./contact.html");
-  }
-  
+    

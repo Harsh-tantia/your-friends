@@ -12,7 +12,7 @@
       background: transparent;
     }
     
-    .container {
+    .register-container {
       margin: auto;
       width: 650px;
       height: 550px;
@@ -187,7 +187,7 @@
       color: #000000;
     }
     </style>
-<div class="container">
+<div class="register-container">
   <div class="welcome">
     <div class="pinkbox">
       <div class="signup nodisplay">
@@ -246,4 +246,27 @@
 </script>
 
 </body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDWnF2Mag6Qsii6T9LoZTYJ-8kvTOkLpVU",
+    authDomain: "your-friend-s.firebaseapp.com",
+    projectId: "your-friend-s",
+    storageBucket: "your-friend-s.appspot.com",
+    messagingSenderId: "758497349240",
+    appId: "1:758497349240:web:8f0ad04db066be70c2278d",
+    measurementId: "G-PF8VPS1XQ2"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </html>
