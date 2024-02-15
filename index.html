@@ -95,11 +95,41 @@
             </p>
 
             <div class="btn-group">
-              <a href="./redirection/contact.html" class="btn btn-primary1">Contact Us</a>
-
-              <a href="./redirection/register.html" id="registerLink" class="btn btn-outline" onclick="openPopup(event)">Register</a>
-
+              <a href="#" class="btn btn-primary1" id="contactButton">Contact Us</a>
+              <div class="popup-container" id="popupContainer">
+                <div class="popup-content">
+                  <span class="close" onclick="closePopup()">&times;</span>
+                  <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+            
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+            
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+            
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+            
+                    <button type="submit">Submit</button>
+                  </form>
+                  <span class="popup-close close" onclick="closePopup()">&times;</span> <!-- Close button -->
+                </div>
+              </div>
+              <a href="#" id="registerLink" class="btn btn-outline" onclick="openPopup(event)">Register</a>
             </div>
+            
+            <script>
+              function openPopup(event) {
+                event.preventDefault();
+                document.getElementById("popupContainer").style.display = "block";
+              }
+              
+              function closePopup() {
+                document.getElementById("popupContainer").style.display = "none";
+              }
+            </script>
 
           </div>
 
@@ -111,6 +141,33 @@
 
         </div>
       </section>
+      <script>// Function to open the popup when either "Contact Us" or "Register" button is clicked
+        function openPopup(event) {
+          event.preventDefault(); // Prevent default link behavior
+          const popupContainer = event.target.nextElementSibling; // Get the next sibling, which is the popup container
+          popupContainer.style.display = 'block';
+        }
+        
+        // Function to close the popup when the close button is clicked
+        function closePopup(event) {
+          event.target.closest('.popup-container').style.display = 'none'; // Close the closest popup container
+        }
+        
+        // Add event listeners to the "Contact Us" and "Register" buttons
+        document.getElementById('contactButton').addEventListener('click', openPopup);
+        document.getElementById('registerLink').addEventListener('click', openPopup);
+        
+        // Add event listener to close the popup when the close button is clicked
+        document.querySelectorAll('.close').forEach(function(closeButton) {
+          closeButton.addEventListener('click', closePopup);
+        });
+        
+        // Prevent the default form submission behavior
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // Here you can add your form submission logic (e.g., send the form data via AJAX)
+        });
+        </script>
       <!-- 
         - #SPAM
       -->

@@ -159,4 +159,5 @@ const container = document.querySelector('.slide-container');
         `width=750,height=600,resizable=yes,left=${leftPosition},top=${topPosition}`
       );
     }
+
     

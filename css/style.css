@@ -1368,4 +1368,75 @@ body {
 
 .card-banner:hover img {
   transform: scale(1.05);
+}/* CSS for Submit Button */
+#contactForm button[type="submit"] {
+  background-color: #C70039;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+#contactForm button[type="submit"]:hover {
+  background-color: #C70039;
+}
+
+/* CSS for Input Fields */
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+  border: none;
+  border-bottom: 1px solid #ddd; /* Horizontal line */
+  width: calc(100% - 20px); /* Adjusting width to fit container */
+  padding: 5px 10px;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm textarea:focus {
+  outline: none;
+  border-color: --viridian-red; /* Change border color on focus */
+}
+
+/* CSS for Popup Container */
+.popup-container {
+  display: none;
+  position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 550px;
+    max-width: 90%;
+    height: auto;
+}
+
+
+.popup-content {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.popup-close {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  cursor: pointer;
 }
