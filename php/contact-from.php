@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Email address to receive the message
-    $to = 'your_email@example.com'; // Replace with your email address
+    $to = 'hv71673@gmail.com'; // Replace with your email address
 
     // Email subject
     $email_subject = 'New Message from Contact Form';
