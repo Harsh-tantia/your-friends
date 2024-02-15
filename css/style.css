@@ -1332,3 +1332,40 @@ body {
 .dropdown-menu li a:hover {
   background-color: #f0f0f0;
 }
+
+.card-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 20px hsl(47, 98%, 50%); /* Adding shadow effect */
+  transform: translateZ(-10px);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+}
+
+.card-banner:hover::before {
+  opacity: 0.5;
+  transform: translateZ(0);
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.card-banner img {
+  transition: transform 0.3s ease;
+}
+
+.card-banner:hover img {
+  transform: scale(1.05);
+}
