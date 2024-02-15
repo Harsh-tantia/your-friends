@@ -99,7 +99,7 @@
               <div class="popup-container" id="popupContainer">
                 <div class="popup-content">
                   <span class="close" onclick="closePopup()">&times;</span>
-                  <form id="contactForm">
+                  <form id="contactForm" action="./php/contact-from.php" method="post">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
             
@@ -117,7 +117,7 @@
                   <span class="popup-close close" onclick="closePopup()">&times;</span> <!-- Close button -->
                 </div>
               </div>
-              <a href="#" id="registerLink" class="btn btn-outline" onclick="openPopup(event)">Register</a>
+              <a href="./redirection/register.html" id="registerLink" class="btn btn-outline" onclick="openPopup(event)">Register</a>
             </div>
             
             <script>
