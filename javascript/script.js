@@ -144,4 +144,19 @@ const container = document.querySelector('.slide-container');
       autoPlay();
     })
 
+    function openPopup(event) {
+      // Prevent the default behavior of the anchor tag (i.e., following the link)
+      event.preventDefault();
+    
+      // Calculate the left and top positions to center the window
+      const leftPosition = (window.screen.width - 750) / 2;
+      const topPosition = (window.screen.height - 600) / 2;
+    
+      // Open the page in a new window centered with specific dimensions and other settings
+      window.open(
+        event.target.href,
+        "_blank",
+        `width=750,height=600,resizable=yes,left=${leftPosition},top=${topPosition}`
+      );
+    }
     
