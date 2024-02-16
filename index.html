@@ -434,34 +434,27 @@
 
           <div class="footer-top">
             <ul class="footer-list">
-
               <li>
                 <p class="footer-list-title">Quick links</p>
               </li>
-
               <li>
                 <a href="#aboutpage" class="footer-link">About</a>
               </li>
-
               <li>
                 <a href="#Pricing" class="footer-link">Pricing</a>
               </li>
-
               <li>
-                <a href="#" class="footer-link">Refund Policy</a>
+                <a href="#" class="footer-link" data-target="refund-policy">Refund Policy</a>
               </li>
-
               <li>
-                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link" data-target="privacy-policy">Privacy Policy</a>
               </li>
-
               <li>
-                <a href="#" class="footer-link">Terms & Conditions</a>
+                <a href="#" class="footer-link" data-target="terms-conditions">Terms & Conditions</a>
               </li>
-
             </ul>
-
-
+            
+            
             <ul class="footer-list">
 
               <li>
@@ -552,6 +545,40 @@
 
         </div>
       </footer>
+      <script>
+        // Function to show the popup
+        function showPopup(target) {
+            var popup = document.getElementById(target);
+            popup.style.display = "block";
+            popup.querySelector('.overlay').style.display = "block";
+        }
+
+        // Function to hide the popup
+        function hidePopup(target) {
+            var popup = document.getElementById(target);
+            popup.style.display = "none";
+            popup.querySelector('.overlay').style.display = "none";
+        }
+
+        // Add click event listeners to all footer links
+        var footerLinks = document.querySelectorAll('.footer-link');
+        footerLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = this.getAttribute('data-target');
+                showPopup(target);
+            });
+        });
+
+        // Add click event listeners to all overlays to close the popup
+        var overlays = document.querySelectorAll('.overlay');
+        overlays.forEach(function(overlay) {
+            overlay.addEventListener('click', function() {
+                var target = this.parentElement.getAttribute('id');
+                hidePopup(target);
+            });
+        });
+    </script>
 
       <!-- register -->
       
