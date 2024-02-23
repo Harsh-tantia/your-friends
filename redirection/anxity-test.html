@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../css/anxity.css">
 </head>
 <body>
-    <form class="survey-form" method="post" action="">		
+ <div class="form-container">
+     <form class="survey-form" method="post" action="">		
         <h1><i class="far fa-list-alt"></i> Anxiety Test</h1>
 
         <div class="steps">
@@ -224,71 +225,296 @@
         </div>
 
     </form>
+    <form class="survey-form" method="post" action="">		
+        <h1><i class="far fa-list-alt"></i> deepresion Test</h1>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const setStep = step => {
-                document.querySelectorAll(".step-content").forEach(element => element.style.display = "none");
-                document.querySelector(`[data-step="${step}"]`).style.display = "block";
-                document.querySelectorAll(".steps .step").forEach((element, index) => {
-                    if (index < step - 1) {
-                        element.classList.add("complete");
-                        element.classList.remove("current");
-                    } else if (index === step - 1) {
-                        element.classList.add("current");
-                        element.classList.remove("complete");
-                    } else {
-                        element.classList.remove("complete", "current");
-                    }
-                });
-            };
+        <div class="steps">
+            <div class="step current"></div>
+            <div class="step"></div>
+            <div class="step"></div>
+            <div class="step"></div>
+            <div class="step"></div>
+            <div class="step"></div>
+            <div class="step"></div>
+        </div>
         
-            document.querySelectorAll("[data-set-step]").forEach(element => {
+        <!-- Question 1 -->
+        <div class="step-content current" data-step="1">
+            <div class="fields">
+                <p>I've been unable to stay in one place - like sitting down - for any length of time.</p>
+                <div class="group">
+                    <label for="radio1">
+                        <input type="radio" name="question1" id="radio1" value="Never">
+                        Never
+                    </label>
+                    <label for="radio2">
+                        <input type="radio" name="question1" id="radio2" value="Some of the time">
+                        Some of the time
+                    </label>
+                    <label for="radio3">
+                        <input type="radio" name="question1" id="radio3" value="Much of the time">
+                        Much of the time
+                    </label>
+                    <label for="radio4">
+                        <input type="radio" name="question1" id="radio4" value="Nearly all the time">
+                        Nearly all the time
+                    </label>
+                </div>					
+            </div>
+            <div class="buttons">
+                <a href="#" class="btn" data-set-step="2">Next</a>
+            </div>
+        </div>
+        
+        <!-- Question 2 -->
+        <div class="step-content" data-step="2">
+            <div class="fields">
+                <p>I've been very concerned about several things at one time.</p>
+                <div class="group">
+                    <label for="radio1">
+                        <input type="radio" name="question1" id="radio1" value="Never">
+                        Never
+                    </label>
+                    <label for="radio2">
+                        <input type="radio" name="question1" id="radio2" value="Some of the time">
+                        Some of the time
+                    </label>
+                    <label for="radio3">
+                        <input type="radio" name="question1" id="radio3" value="Much of the time">
+                        Much of the time
+                    </label>
+                    <label for="radio4">
+                        <input type="radio" name="question1" id="radio4" value="Nearly all the time">
+                        Nearly all the time
+                    </label>
+                </div>		
+            </div>
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="1">Prev</a>
+                <a href="#" class="btn" data-set-step="3">Next</a>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="step-content" data-step="3">
+            <div class="fields">
+                <p>I've been agitated, tense, or skittish.</p>
+                <div class="group">
+                    <label for="radio1">
+                        <input type="radio" name="question1" id="radio1" value="Never">
+                        Never
+                    </label>
+                    <label for="radio2">
+                        <input type="radio" name="question1" id="radio2" value="Some of the time">
+                        Some of the time
+                    </label>
+                    <label for="radio3">
+                        <input type="radio" name="question1" id="radio3" value="Much of the time">
+                        Much of the time
+                    </label>
+                    <label for="radio4">
+                        <input type="radio" name="question1" id="radio4" value="Nearly all the time">
+                        Nearly all the time
+                    </label>
+                </div>		
+            </div>
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="2">Prev</a>
+                <a href="#" class="btn" data-set-step="4">Next</a>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="step-content" data-step="4">
+            <div class="fields">
+                <p>I've been unable to feel calm or relaxed.</p>
+                <div class="group">
+                    <label for="radio1">
+                        <input type="radio" name="question1" id="radio1" value="Never">
+                        Never
+                    </label>
+                    <label for="radio2">
+                        <input type="radio" name="question1" id="radio2" value="Some of the time">
+                        Some of the time
+                    </label>
+                    <label for="radio3">
+                        <input type="radio" name="question1" id="radio3" value="Much of the time">
+                        Much of the time
+                    </label>
+                    <label for="radio4">
+                        <input type="radio" name="question1" id="radio4" value="Nearly all the time">
+                        Nearly all the time
+                    </label>
+                </div>		
+            </div>
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="3">Prev</a>
+                <a href="#" class="btn" data-set-step="5">Next</a>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="step-content" data-step="5">
+            <div class="fields">
+                <p>I've struggled to control feelings of anxiety, agitation, or fear.</p>
+                <div class="group">
+                    <label for="radio1">
+                        <input type="radio" name="question1" id="radio1" value="Never">
+                        Never
+                    </label>
+                    <label for="radio2">
+                        <input type="radio" name="question1" id="radio2" value="Some of the time">
+                        Some of the time
+                    </label>
+                    <label for="radio3">
+                        <input type="radio" name="question1" id="radio3" value="Much of the time">
+                        Much of the time
+                    </label>
+                    <label for="radio4">
+                        <input type="radio" name="question1" id="radio4" value="Nearly all the time">
+                        Nearly all the time
+                    </label>
+                </div>		
+            </div>
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="4">Prev</a>
+                <a href="#" class="btn" data-set-step="6">Next</a>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="step-content" data-step="6">
+            <div class="fields">
+                <p>I've felt bad-tempered, irritable, or moody.</p>
+                <div class="group">
+                    <label for="radio1">
+                        <input type="radio" name="question1" id="radio1" value="Never">
+                        Never
+                    </label>
+                    <label for="radio2">
+                        <input type="radio" name="question1" id="radio2" value="Some of the time">
+                        Some of the time
+                    </label>
+                    <label for="radio3">
+                        <input type="radio" name="question1" id="radio3" value="Much of the time">
+                        Much of the time
+                    </label>
+                    <label for="radio4">
+                        <input type="radio" name="question1" id="radio4" value="Nearly all the time">
+                        Nearly all the time
+                    </label>
+                </div>		
+            </div>
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="5">Prev</a>
+                <a href="#" class="btn" data-set-step="7">Next</a>
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="step-content" data-step="7">
+            <div class="fields">
+                <p>I've been afraid or panicky about bad things that might happen to myself or others.</p>
+                <div class="group">
+                    <label for="radio1">
+                        <input type="radio" name="question1" id="radio1" value="Never">
+                        Never
+                    </label>
+                    <label for="radio2">
+                        <input type="radio" name="question1" id="radio2" value="Some of the time">
+                        Some of the time
+                    </label>
+                    <label for="radio3">
+                        <input type="radio" name="question1" id="radio3" value="Much of the time">
+                        Much of the time
+                    </label>
+                    <label for="radio4">
+                        <input type="radio" name="question1" id="radio4" value="Nearly all the time">
+                        Nearly all the time
+                    </label>
+                </div>		
+            </div>
+            <div class="buttons">
+                <a href="#" class="btn alt" data-set-step="6">Prev</a>
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </div>
+
+    </form>
+ </div>
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const setStep = (form, step) => {
+            form.querySelectorAll(".step-content").forEach(element => element.style.display = "none");
+            form.querySelector(`[data-step="${step}"]`).style.display = "block";
+            form.querySelectorAll(".steps .step").forEach((element, index) => {
+                if (index < step - 1) {
+                    element.classList.add("complete");
+                    element.classList.remove("current");
+                } else if (index === step - 1) {
+                    element.classList.add("current");
+                    element.classList.remove("complete");
+                } else {
+                    element.classList.remove("complete", "current");
+                }
+            });
+        };
+
+        document.querySelectorAll(".survey-form").forEach(form => {
+            form.querySelectorAll("[data-set-step]").forEach(element => {
                 element.addEventListener("click", event => {
                     event.preventDefault();
                     const nextStep = parseInt(element.dataset.setStep);
-                    const currentStep = parseInt(document.querySelector(".step-content.current").dataset.step);
+                    const currentStep = parseInt(form.querySelector(".step-content.current").dataset.step);
                     if (currentStep === 7) {
-                        const options = document.querySelectorAll(".step-content.current input[type='radio']:checked");
+                        const options = form.querySelectorAll(".step-content.current input[type='radio']:checked");
                         if (options.length === 0) {
                             alert("Please select an option to proceed.");
                             return;
                         }
                     }
-                    setStep(nextStep);
+                    setStep(form, nextStep);
                 });
             });
-        
-            document.querySelector("form").addEventListener("submit", function(event) {
+
+            form.addEventListener("submit", function(event) {
                 event.preventDefault();
-                const options = document.querySelectorAll(".step-content input[type='radio']:checked");
-                const allNever = Array.from(options).every(option => option.value === "Never");
-                if (allNever) {
-                    alert("You don't have any anxiety!");
-                    return;
-                }
-        
                 let score = 0;
+                const options = form.querySelectorAll(".step-content input[type='radio']:checked");
+                
                 options.forEach(option => {
-                    if (option.value !== "Never") {
-                        score++;
-                    }
+                    score += parseInt(option.value); // Adding points based on selected options
                 });
-        
-                let result = "";
-                if (score >= 0 && score <= 4) {
-                    result = "Minimal Anxiety";
-                } else if (score >= 5 && score <= 9) {
-                    result = "Mild Anxiety";
-                } else if (score >= 10 && score <= 14) {
-                    result = "Moderate Anxiety";
-                } else {
-                    result = "Severe Anxiety";
+
+                let resultType;
+                if (form.classList.contains("anxiety-form")) {
+                    if (score <= 8) {
+                        resultType = "Minimal Anxiety";
+                    } else if (score <= 16) {
+                        resultType = "Mild Anxiety";
+                    } else if (score <= 24) {
+                        resultType = "Moderate Anxiety";
+                    } else {
+                        resultType = "Severe Anxiety";
+                    }
+                } else if (form.classList.contains("depression-form")) {
+                    if (score <= 8) {
+                        resultType = "Minimal Depression";
+                    } else if (score <= 16) {
+                        resultType = "Mild Depression";
+                    } else if (score <= 24) {
+                        resultType = "Moderate Depression";
+                    } else {
+                        resultType = "Severe Depression";
+                    }
                 }
-                alert(`Your anxiety level: ${result}`);
+                alert(`Your result: ${resultType}`);
+                // Optionally, you can submit the form here if needed
+                // form.submit();
             });
         });
-        
-    </script>
+    });
+</script>
+
 </body>
 </html>

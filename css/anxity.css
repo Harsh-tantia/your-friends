@@ -312,3 +312,12 @@ h1 i {
 .survey-form .result p {
     font-weight: 500;
 }
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.form-container .survey-form {
+    flex: 0 0 48%; /* Adjust this value according to your preference */
+}
