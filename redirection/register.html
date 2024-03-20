@@ -246,11 +246,11 @@
 </script>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-  import { getdatabse, set , ref } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
-  import { getauth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
 
   const firebaseConfig = {
-    apiKey: "AIzaSyBFnRL8mSQMO-LJQaD5CX8YNJng12HBO9g",
+    apiKey: "YOUR_API_KEY",
     authDomain: "your-friends-ff3a9.firebaseapp.com",
     projectId: "your-friends-ff3a9",
     storageBucket: "your-friends-ff3a9.appspot.com",
@@ -261,9 +261,8 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  const db = getdatabase();
-  const auth = getauth(app);
+  const db = getDatabase();
+  const auth = getAuth(app);
 
   let mainForm = document.getElementById('main-form'); 
   let emailInput = mainForm.querySelector('#email-input'); 
@@ -275,6 +274,7 @@
   
     createUserWithEmailAndPassword(auth, emailInput.value, passInput.value)
       .then((credentials) => {
+        // Handle successful registration if needed
       })
       .catch((error) => {
         alert(error.message);
@@ -282,7 +282,9 @@
         console.log(error.message);
       });
   };
-  mainForm.addEventListener('submit',registerUser);
+
+  mainForm.addEventListener('submit', registerUser);
 </script>
+
 </body>
 </html>
