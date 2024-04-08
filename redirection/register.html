@@ -244,47 +244,6 @@
     });
   });
 </script>
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
-  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
-
-  const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "your-friends-ff3a9.firebaseapp.com",
-    projectId: "your-friends-ff3a9",
-    storageBucket: "your-friends-ff3a9.appspot.com",
-    messagingSenderId: "1006612895582",
-    appId: "1:1006612895582:web:9bac0a87de74ab8a1f61cf",
-    measurementId: "G-MNJ6XEBHDT"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const db = getDatabase();
-  const auth = getAuth(app);
-
-  let mainForm = document.getElementById('main-form'); 
-  let emailInput = mainForm.querySelector('#email-input'); 
-  let passInput = mainForm.querySelector('#pass-input');
-  let usernameInput = mainForm.querySelector('#username-input');
-
-  let registerUser = evt => {
-    evt.preventDefault();
-  
-    createUserWithEmailAndPassword(auth, emailInput.value, passInput.value)
-      .then((credentials) => {
-        // Handle successful registration if needed
-      })
-      .catch((error) => {
-        alert(error.message);
-        console.log(error.code);
-        console.log(error.message);
-      });
-  };
-
-  mainForm.addEventListener('submit', registerUser);
-</script>
 
 </body>
 </html>
