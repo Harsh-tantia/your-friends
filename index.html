@@ -293,135 +293,114 @@
 
       <section class="section popular">
         <div class="container">
-
           <p id="Pricing" class="section-subtitle">Pricing</p>
-
           <h2 class="h2 section-title">Most Popular Packages</h2>
-
           <ul class="popular-list">
-
             <li>
-              <div class="popular-card">
-
+              <div class="popular-card" id="package1">
                 <figure class="card-banner">
-                  <a href="./redirection/chat shedule.html">
-                    <img src="./assets/images/chat.png" width="740" height="518" loading="lazy"
-                      alt="Kuala Lumpur, Malaysia" class="img-cover">
-                  </a>
-
-
+                  <img src="./assets/images/chat.png" width="740" height="518" loading="lazy" alt="Kuala Lumpur, Malaysia" class="img-cover">
                 </figure>
-
                 <div class="card-content">
-
                   <div class="card-wrapper">
-                    <a href="./redirection/chat shedule.html" class="card-price">₹199</a>
+                    <span class="card-price">₹199</span>
                     <div class="card-price"><del>₹499</del></div>
-
-
                     <div class="card-rating">
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star-outline"></ion-icon>
-
                       <data value="2">(2)</data>
                     </div>
                   </div>
-
-                  <h3 class="card-title">
-                    <a href="#">Instant Support, Friendly Chat.</a>
-                  </h3>
-
-
-
+                  <h3 class="card-title">Instant Support, Friendly Chat.</h3>
+                  <div class="payment-form-container" style="display: none;">
+                    <form action="process_payment.php" method="post" class="payment-form">
+                      <input type="hidden" name="package_id" value="package1">
+                      <input type="hidden" name="price" value="₹199">
+                      <button type="submit" class="pay-now-btn" style="border-radius: 10px; background-color: #C70039; height: 4vh; width: 30vh;"><h3>Pay Now</h3></button>
+                    </form>
+                  </div>
                 </div>
-
               </div>
             </li>
-
-            <li>
-              <div class="popular-card">
-
+              <div class="popular-card" id="package3">
                 <figure class="card-banner">
-                  <a href="./redirection/call shedule.html">
-                    <img src="./assets/images/call.png" width="740" height="518" loading="lazy"
-                      alt="Kuala Lumpur, Malaysia" class="img-cover">
-                  </a>
+                  <img src="./assets/images/call.png" width="740" height="518" loading="lazy" alt="Kuala Lumpur, Malaysia" class="img-cover">
                 </figure>
-
                 <div class="card-content">
-
                   <div class="card-wrapper">
-                    <a href="./redirection/call shedule.html" class="card-price">₹299</a>
-                    <div class="card-price"><del>₹799</del></div>
-
-
+                    <span class="card-price">₹299</span>
+                    <div class="card-price"><del>₹599</del></div>
                     <div class="card-rating">
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star-outline"></ion-icon>
-
-                      <data value="2">(2)</data>
+                      <data value="4">(4)</data>
                     </div>
                   </div>
-
-                  <h3 class="card-title">
-                    <a href="#">Personalized Support - Call Now!</a>
-                  </h3>
-
-
-
+                  <h3 class="card-title">Instant Support, Friendly Chat.</h3>
+                  <div class="payment-form-container" style="display: none;">
+                    <form action="process_payment.php" method="post" class="payment-form">
+                      <input type="hidden" name="package_id" value="package3">
+                      <input type="hidden" name="price" value="₹299">
+                      <button type="submit" class="pay-now-btn" style="border-radius: 10px; background-color: #C70039; height: 4vh; width: 30vh;"><h3>Pay Now</h3></button>
+                    </form>
+                  </div>
                 </div>
-
               </div>
             </li>
-
             <li>
-              <div class="popular-card">
-
+              <div class="popular-card" id="premium-package">
                 <figure class="card-banner">
-                  <a href="./redirection/premium.html">
-                    <img src="./assets/images/subscription.png" width="740" height="518" loading="lazy" alt=""
-                      class="img-cover">
-                  </a>
-
-
+                  <img src="./assets/images/subscription.png" width="740" height="518" loading="lazy" alt="premium-package" class="img-cover">
                 </figure>
-
                 <div class="card-content">
-
                   <div class="card-wrapper">
-                    <a href="./redirection/premium.html" class="card-price">₹3600</a>
-                    <div class="card-price"><del>₹17,999</del></div>
-
-
+                    <span class="card-price">₹999</span>
+                    <div class="card-price"><del>₹1499</del></div>
                     <div class="card-rating">
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star-outline"></ion-icon>
-
-                      <data value="2">(2)</data>
+                      <ion-icon name="star"></ion-icon>
+                      <data value="5">(5)</data>
                     </div>
                   </div>
-
-                  <h3 class="card-title">
-                    <a href="#">Enjoy the Ride, Forget the End.</a>
-                  </h3>
+                  <h3 class="card-title">Premium Support, VIP Chat.</h3>
+                  <div class="payment-form-container" style="display: none;">
+                    <form action="process_payment.php" method="post" class="payment-form">
+                      <input type="hidden" name="package_id" value="premium-package">
+                      <input type="hidden" name="price" value="₹999">
+                      <button type="submit" class="pay-now-btn" style="border-radius: 10px; background-color: #C70039; height: 4vh; width: 30vh;"><h3>Pay Now</h3></button>
+                    </form>
+                  </div>
                 </div>
-
               </div>
             </li>
-
+            
           </ul>
-
         </div>
       </section>
+      
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          // Add event listeners to each package card
+          var packageCards = document.querySelectorAll('.popular-card');
+          packageCards.forEach(function (card) {
+            card.addEventListener('click', function () {
+              // Toggle visibility of payment form container
+              var paymentFormContainer = card.querySelector('.payment-form-container');
+              paymentFormContainer.style.display = (paymentFormContainer.style.display === 'none') ? 'block' : 'none';
+            });
+          });
+        });
+      </script>
 
 
 
